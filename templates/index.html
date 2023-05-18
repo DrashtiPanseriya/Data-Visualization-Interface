@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSV File Upload</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333333;
+            padding-top: 50px;
+        }
+        
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .file-input {
+            display: block;
+            margin-bottom: 20px;
+        }
+        
+        .file-input label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #ffffff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .file-input input[type="file"] {
+            display: none;
+        }
+        
+        .file-input label:hover {
+            background-color: #2980b9;
+        }
+        
+        .file-input input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #2ecc71;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .file-input input[type="submit"]:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload a CSV File</h1><br>
+        <form action="/upload" method="POST" enctype="multipart/form-data" class="file-input">
+            <label for="file" style="display:flex; justify-content:center;">Choose a CSV file</label><br>
+            <input type="file" name="file" id="file" accept=".csv"  required><br>
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+</body>
+</html>
